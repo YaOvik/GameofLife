@@ -1,0 +1,23 @@
+﻿<Window x:Class="GameOfLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="191.2" Width="328.2">
+    <Grid Margin="0,0,0.4,4.8">
+        <Grid HorizontalAlignment="Left" Height="40" Margin="36,60,0,0" VerticalAlignment="Top" Width="275">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="84*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="91*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnNewGame"  Content="New Game"             HorizontalAlignment="Right" VerticalAlignment="Top" Width="84"  Height="40"/>
+            <Button x:Name="btnLoadGame" Content="Load" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Height="40" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnExitGame" Content="Exit" Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="91"  Height="40"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
