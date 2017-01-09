@@ -10,38 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GOL;
 
 namespace GOL
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for frmGame.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class frmGame : Window
     {
-        //frmGame newFrm = new frmGame();
-        public MainWindow()
+        //MainWindow mainWin = new MainWindow();
+        public frmGame()
         {
             InitializeComponent();
         }
 
-        private void btnNewGame_Click(object sender, RoutedEventArgs e)
-        {
-            OpenNewWin();
-        }
-
-        private void btnExitGame_Click(object sender, RoutedEventArgs e)
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            Environment.Exit(0);
-        }
-
-        private void OpenNewWin()
-        {
-            this.Close();
-            var newW = new frmGame();
+            var newW = new MainWindow();
             newW.Show();
         }
     }

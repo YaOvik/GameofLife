@@ -13,3 +13,7 @@ C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\GOL.Pro
 C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
 C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\GOL.exe
 C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\GOL.pdb
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\frmGame.g.cs
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\frmGame.baml
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\Page1.g.cs
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\Page1.baml
