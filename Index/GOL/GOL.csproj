@@ -70,6 +70,9 @@
     <Compile Include="frmGame.xaml.cs">
       <DependentUpon>frmGame.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameGrid\Cell.cs" />
+    <Compile Include="GameGrid\Row.cs" />
+    <Compile Include="GameGrid\Grid.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
