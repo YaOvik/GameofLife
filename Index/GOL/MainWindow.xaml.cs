@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GOL;
+using System.Drawing;
 
 namespace GOL
 {
@@ -40,9 +40,34 @@ namespace GOL
 
         private void OpenNewWin()
         {
-            this.Close();
             var newW = new frmGame();
             newW.Show();
+            this.Close();
         }
+/*        public void MultiplyTransform(Matrix matrix);
+
+       private void MultiplyTransformMatrix(PaintEventArgs e)
+       {
+
+            // Create transform matrix.
+            Matrix transformMatrix = new Matrix();
+
+            // Translate matrix, prepending translation vector.
+            transformMatrix.Translate(200.0F, 100.0F);
+
+            // Rotate transformation matrix of graphics object,
+
+            // prepending rotation matrix.
+            e.Graphics.RotateTransform(30.0F);
+
+            // Multiply (prepend to) transformation matrix of
+
+            // graphics object to translate graphics transformation.
+            e.Graphics.MultiplyTransform(transformMatrix);
+
+            // Draw rotated, translated ellipse.
+            e.Graphics.DrawEllipse(new Pen(Color.Blue, 3), -80, -40, 160, 80);
+        }
+        */
     }
 }

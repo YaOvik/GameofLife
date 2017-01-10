@@ -8,7 +8,7 @@ namespace GOL.GameGrid
 {
     class Cell
     {
-        //A Cell can be alive or dead based on this property - true = alive and false = dead
+        //A Cell can be alive or dead based on this property; - true = alive and false = dead
         public Boolean IsAlive { get; set; }
 
         // other code ...

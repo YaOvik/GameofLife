@@ -28,9 +28,9 @@ namespace GOL
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
             var newW = new MainWindow();
             newW.Show();
+            this.Close();
         }
     }
 }
