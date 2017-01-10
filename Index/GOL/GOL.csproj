@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="GameGrid\Cell.cs" />
     <Compile Include="GameGrid\CellTypeEnum.cs" />
+    <Compile Include="GameGrid\Props\MyBtnProps.cs" />
     <Compile Include="GameGrid\Row.cs" />
     <Compile Include="GameGrid\Grid.cs" />
     <Compile Include="MainWindow.xaml.cs">

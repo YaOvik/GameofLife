@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GOL"
         mc:Ignorable="d"
-        Title="frmGame" Height="300" Width="388.2">
+        Title="frmGame" Height="300" Width="388.2" Background="#ffffcc">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="38" Margin="40,223,0,0" VerticalAlignment="Top" Width="300">
+        <Grid x:Name="btnNavbar" HorizontalAlignment="Left" Height="38" Margin="40,223,0,0" VerticalAlignment="Top" Width="300">
             <Grid.RowDefinitions>
                 <RowDefinition Height="38.4"/>
                 <!--<RowDefinition Height="3.5*"/>-->
@@ -25,7 +25,7 @@
             <Button x:Name="btnReturn"  Content="Menu"            HorizontalAlignment="Left" VerticalAlignment="Top" Width="100"             Margin="0,20,0,0" Grid.RowSpan="2" Grid.Column="2" Click="btnReturn_Click"/>
         </Grid>
 
-        <Grid HorizontalAlignment="Left" Height="180" Margin="100,36,0,0" VerticalAlignment="Top" Width="180" Background="#FFDDCBCB">
+        <Grid x:Name="GameBoard" HorizontalAlignment="Left" Height="180" Margin="100,36,0,0" VerticalAlignment="Top" Width="180" Background="#FFDDCBCB">
 
             <Grid.RowDefinitions>
 
@@ -53,88 +53,88 @@
                 <ColumnDefinition Width="1*"/>
 
             </Grid.ColumnDefinitions>
-            
-            <Button x:Name="btnTop"        Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" />
-            <Button x:Name="btnTop_Copy"   Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy1"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy2"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy3"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy4"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy5"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy6"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy7"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy8"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" />
-            <Button x:Name="btnTop_Copy9"  Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy10" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy11" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy12" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy13" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy14" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy15" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy16" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy17" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" />
-            <Button x:Name="btnTop_Copy18" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy19" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy20" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy21" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy22" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy23" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy24" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy25" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy26" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" />
-            <Button x:Name="btnTop_Copy27" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy28" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy29" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy30" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy31" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy32" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy33" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy34" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy35" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" />
-            <Button x:Name="btnTop_Copy36" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy37" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy38" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy39" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy40" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy41" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy42" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy43" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy44" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" />
-            <Button x:Name="btnTop_Copy45" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy46" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy47" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy48" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy49" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy50" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy51" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy52" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy53" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" />
-            <Button x:Name="btnTop_Copy54" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy55" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy56" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy57" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy58" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy59" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy60" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy61" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy62" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" />
-            <Button x:Name="btnTop_Copy63" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy64" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy65" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy66" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy67" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy68" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy69" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy70" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="8" />
-            <Button x:Name="btnTop_Copy71" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" />
-            <Button x:Name="btnTop_Copy72" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="1" />
-            <Button x:Name="btnTop_Copy73" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="2" />
-            <Button x:Name="btnTop_Copy74" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="3" />
-            <Button x:Name="btnTop_Copy75" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="4" />
-            <Button x:Name="btnTop_Copy76" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="5" />
-            <Button x:Name="btnTop_Copy77" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="6" />
-            <Button x:Name="btnTop_Copy78" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="7" />
-            <Button x:Name="btnTop_Copy79" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="8" />
+
+            <Button x:Name="btn01" Content="{Binding Name}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" />
+            <Button x:Name="btn02" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="1" />
+            <Button x:Name="btn03" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="2" />
+            <Button x:Name="btn04" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="3" />
+            <Button x:Name="btn05" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="4" />
+            <Button x:Name="btn06" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="5" />
+            <Button x:Name="btn07" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="6" />
+            <Button x:Name="btn08" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="7" />
+            <Button x:Name="btn09" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="0" Grid.Column="8" />
+            <Button x:Name="btn10" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" />
+            <Button x:Name="btn11" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="1" />
+            <Button x:Name="btn12" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="2" />
+            <Button x:Name="btn13" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="3" />
+            <Button x:Name="btn14" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="4" />
+            <Button x:Name="btn15" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="5" />
+            <Button x:Name="btn16" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="6" />
+            <Button x:Name="btn17" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="7" />
+            <Button x:Name="btn18" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="1" Grid.Column="8" />
+            <Button x:Name="btn19" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" />
+            <Button x:Name="btn20" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="1" />
+            <Button x:Name="btn21" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="2" />
+            <Button x:Name="btn22" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="3" />
+            <Button x:Name="btn23" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="4" />
+            <Button x:Name="btn24" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="5" />
+            <Button x:Name="btn25" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="6" />
+            <Button x:Name="btn26" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="7" />
+            <Button x:Name="btn27" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="2" Grid.Column="8" />
+            <Button x:Name="btn28" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" />
+            <Button x:Name="btn29" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="1" />
+            <Button x:Name="btn30" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="2" />
+            <Button x:Name="btn31" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="3" />
+            <Button x:Name="btn32" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="4" />
+            <Button x:Name="btn33" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="5" />
+            <Button x:Name="btn34" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="6" />
+            <Button x:Name="btn35" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="7" />
+            <Button x:Name="btn36" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="3" Grid.Column="8" />
+            <Button x:Name="btn37" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" />
+            <Button x:Name="btn38" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="1" />
+            <Button x:Name="btn39" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="2" />
+            <Button x:Name="btn40" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="3" />
+            <Button x:Name="btn41" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="4" />
+            <Button x:Name="btn42" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="5" />
+            <Button x:Name="btn43" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="6" />
+            <Button x:Name="btn44" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="7" />
+            <Button x:Name="btn45" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="4" Grid.Column="8" />
+            <Button x:Name="btn46" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" />
+            <Button x:Name="btn47" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="1" />
+            <Button x:Name="btn48" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="2" />
+            <Button x:Name="btn49" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="3" />
+            <Button x:Name="btn50" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="4" />
+            <Button x:Name="btn51" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="5" />
+            <Button x:Name="btn52" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="6" />
+            <Button x:Name="btn53" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="7" />
+            <Button x:Name="btn54" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="5" Grid.Column="8" />
+            <Button x:Name="btn55" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" />
+            <Button x:Name="btn56" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="1" />
+            <Button x:Name="btn57" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="2" />
+            <Button x:Name="btn58" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="3" />
+            <Button x:Name="btn59" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="4" />
+            <Button x:Name="btn60" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="5" />
+            <Button x:Name="btn61" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="6" />
+            <Button x:Name="btn62" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="7" />
+            <Button x:Name="btn63" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Grid.Column="8" />
+            <Button x:Name="btn64" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" />
+            <Button x:Name="btn65" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="1" />
+            <Button x:Name="btn66" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="2" />
+            <Button x:Name="btn67" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="3" />
+            <Button x:Name="btn68" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="4" />
+            <Button x:Name="btn69" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="5" />
+            <Button x:Name="btn70" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="6" />
+            <Button x:Name="btn71" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="7" />
+            <Button x:Name="btn72" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="6" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="8" />
+            <Button x:Name="btn73" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" />
+            <Button x:Name="btn74" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="1" />
+            <Button x:Name="btn75" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="2" />
+            <Button x:Name="btn76" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="3" />
+            <Button x:Name="btn77" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="4" />
+            <Button x:Name="btn78" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="5" />
+            <Button x:Name="btn79" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="6" />
+            <Button x:Name="btn80" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="7" />
+            <Button x:Name="btn81" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" Grid.Row="7" Margin="0,19,0,0" Grid.RowSpan="2" Grid.Column="8" />
 
         </Grid>
 
