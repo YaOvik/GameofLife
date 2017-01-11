@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GOL"
         mc:Ignorable="d"
-        Title="frmGame" Height="326.4" Width="388.2" Background="#ffffcc">
+        Title="frmGame" Height="326.4" Width="388.2" Background="#f2f2f2">
     <Grid x:Name="WindowGrid" Height="Auto" Width="Auto">
         <Grid x:Name="btnNavbar" HorizontalAlignment="Left" Height="38" Margin="40,241,0,0" VerticalAlignment="Top" Width="300">
             <Grid.RowDefinitions>
@@ -56,16 +56,16 @@
                 <ColumnDefinition Width="1*"/>
 
             </Grid.ColumnDefinitions>
-            <Button x:Name="btn00" Content="" Grid.Column="0" Grid.Row="0" Height="Auto" Width="Auto" Click="btn00_Click" MouseRightButtonUp="RightClick" DataContext="{Binding IsAlive}"/>
-            <Button x:Name="btn01" Content="" Grid.Column="0" Grid.Row="1" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn02" Content="" Grid.Column="0" Grid.Row="2" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn03" Content="" Grid.Column="0" Grid.Row="3" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn04" Content="" Grid.Column="0" Grid.Row="4" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn05" Content="" Grid.Column="0" Grid.Row="5" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn06" Content="" Grid.Column="0" Grid.Row="6" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn07" Content="" Grid.Column="0" Grid.Row="7" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn08" Content="" Grid.Column="0" Grid.Row="8" Height="Auto" Width="Auto"/>
-            <Button x:Name="btn09" Content="" Grid.Column="0" Grid.Row="9" Height="Auto" Width="Auto"/>
+            <Button x:Name="btn00" Content="" Grid.Column="0" Grid.Row="0" Height="Auto" Width="Auto" Click="btn00_Click" MouseRightButtonUp="btn00_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn01" Content="" Grid.Column="0" Grid.Row="1" Height="Auto" Width="Auto" Click="btn01_Click" MouseRightButtonUp="btn01_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn02" Content="" Grid.Column="0" Grid.Row="2" Height="Auto" Width="Auto" Click="btn02_Click" MouseRightButtonUp="btn02_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn03" Content="" Grid.Column="0" Grid.Row="3" Height="Auto" Width="Auto" Click="btn03_Click" MouseRightButtonUp="btn03_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn04" Content="" Grid.Column="0" Grid.Row="4" Height="Auto" Width="Auto" Click="btn04_Click" MouseRightButtonUp="btn04_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn05" Content="" Grid.Column="0" Grid.Row="5" Height="Auto" Width="Auto" Click="btn05_Click" MouseRightButtonUp="btn05_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn06" Content="" Grid.Column="0" Grid.Row="6" Height="Auto" Width="Auto" Click="btn06_Click" MouseRightButtonUp="btn06_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn07" Content="" Grid.Column="0" Grid.Row="7" Height="Auto" Width="Auto" Click="btn07_Click" MouseRightButtonUp="btn07_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn08" Content="" Grid.Column="0" Grid.Row="8" Height="Auto" Width="Auto" Click="btn08_Click" MouseRightButtonUp="btn08_RightClick" DataContext="{Binding IsAlive}"/>
+            <Button x:Name="btn09" Content="" Grid.Column="0" Grid.Row="9" Height="Auto" Width="Auto" Click="btn09_Click" MouseRightButtonUp="btn09_RightClick" DataContext="{Binding IsAlive}"/>
 
             <Button x:Name="btn10" Content="" Grid.Column="1" Grid.Row="0" Height="Auto" Width="Auto"/>
             <Button x:Name="btn11" Content="" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto"/>

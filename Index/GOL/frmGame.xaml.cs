@@ -28,8 +28,8 @@ namespace GOL
         {
             InitializeComponent();
             MyBtnProps btnContent = new MyBtnProps() { Name = "T" };
-            
 
+            GameBoard.ShowGridLines = new Grid();
             
 
             /*
@@ -55,7 +55,7 @@ namespace GOL
         private void btnCollection()
         {
             MyBtnProps btnDataContext = new MyBtnProps() { IsAlive = "T" };
-            btn00.DataContext = btnDataContext;
+            //btn00.DataContext = btnDataContext;
             var btnCollection = new List<Button>();
             #region Grid Buttons added to collection.
             btnCollection.Add(btn01);
@@ -173,6 +173,7 @@ namespace GOL
             foreach (var item in btnCollection)
             {
                 item.DataContext = btnDataContext;
+                btn01.Background = new SolidColorBrush(Color.FromArgb(100, 102, 255, 179));
                 /*
                 if (item.DataContext == "hello")
                 {
@@ -181,16 +182,93 @@ namespace GOL
                 */
             }
         }
-        
+
+        #region LeftBtnClickEvents
         private void btn00_Click(object sender, RoutedEventArgs e)
         {
             btn00.Background = Brushes.Green;
         }
+        private void btn01_Click(object sender, RoutedEventArgs e)
+        {
+            btn01.Background = Brushes.Green;
+        }
+        private void btn02_Click(object sender, RoutedEventArgs e)
+        {
+            btn02.Background = Brushes.Green;
+        }
+        private void btn03_Click(object sender, RoutedEventArgs e)
+        {
+            btn03.Background = Brushes.Green;
+        }
+        private void btn04_Click(object sender, RoutedEventArgs e)
+        {
+            btn04.Background = Brushes.Green;
+        }
+        private void btn05_Click(object sender, RoutedEventArgs e)
+        {
+            btn05.Background = Brushes.Green;
+        }
 
-        private void RightClick(object sender, MouseButtonEventArgs e)
+        private void btn06_Click(object sender, RoutedEventArgs e)
+        {
+            btn60.Background = Brushes.Green;
+        }
+        private void btn07_Click(object sender, RoutedEventArgs e)
+        {
+            btn07.Background = Brushes.Green;
+        }
+        private void btn08_Click(object sender, RoutedEventArgs e)
+        {
+            btn08.Background = Brushes.Green;
+        }
+        private void btn09_Click(object sender, RoutedEventArgs e)
+        {
+            btn09.Background = Brushes.Green;
+        }
+
+        #endregion LeftBtnClickEvents
+
+        #region RightBtnClickEvent
+        private void btn00_RightClick(object sender, MouseButtonEventArgs e)
         {
             btn00.Background = Brushes.Red;
         }
-        
+        private void btn01_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn01.Background = Brushes.Red;
+        }
+        private void btn02_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn02.Background = Brushes.Red;
+        }
+        private void btn03_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn03.Background = Brushes.Red;
+        }
+        private void btn04_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn04.Background = Brushes.Red;
+        }
+        private void btn05_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn05.Background = Brushes.Red;
+        }
+        private void btn06_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn06.Background = Brushes.Red;
+        }
+        private void btn07_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn07.Background = Brushes.Red;
+        }
+        private void btn08_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn08.Background = Brushes.Red;
+        }
+        private void btn09_RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn09.Background = Brushes.Red;
+        }
+        #endregion RightBtnClickEvent
     }
 }
