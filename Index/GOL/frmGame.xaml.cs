@@ -21,12 +21,29 @@ namespace GOL
     /// </summary>
     public partial class frmGame : Window
     {
-        //MainWindow mainWin = new MainWindow();
+
+        string HelloWorld = "Hello World";
+        private string btnDataContext;
         public frmGame()
         {
             InitializeComponent();
+            MyBtnProps btnContent = new MyBtnProps() { Name = "T" };
+            
+
+            
+
+            /*
+            if (IsAlive == true)
+            {
+                btn01.Background = new SolidColorBrush(Color.FromArgb(100, 102, 255, 179));
+            }
+            else
+            {
+                btn01.Background = new SolidColorBrush(Color.FromArgb(100, 242, 242, 242));
+            }
+            */
+
             btnCollection();
-            //MyBtnProps btn01DataContext = new MyBtnProps() = { Name = "T" };
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
@@ -37,8 +54,11 @@ namespace GOL
         }
         private void btnCollection()
         {
+            MyBtnProps btnDataContext = new MyBtnProps() { IsAlive = "T" };
+            btn00.DataContext = btnDataContext;
             var btnCollection = new List<Button>();
-            #region Buttons added to collection.
+            #region Grid Buttons added to collection.
+            btnCollection.Add(btn01);
             btnCollection.Add(btn01);
             btnCollection.Add(btn02);
             btnCollection.Add(btn03);
@@ -128,17 +148,49 @@ namespace GOL
 
             btnCollection.Add(btn80);
             btnCollection.Add(btn81);
+            btnCollection.Add(btn82);
+            btnCollection.Add(btn83);
+            btnCollection.Add(btn84);
+            btnCollection.Add(btn85);
+            btnCollection.Add(btn86);
+            btnCollection.Add(btn87);
+            btnCollection.Add(btn88);
+            btnCollection.Add(btn89);
+
+            btnCollection.Add(btn90);
+            btnCollection.Add(btn91);
+            btnCollection.Add(btn92);
+            btnCollection.Add(btn93);
+            btnCollection.Add(btn94);
+            btnCollection.Add(btn95);
+            btnCollection.Add(btn96);
+            btnCollection.Add(btn97);
+            btnCollection.Add(btn98);
+            btnCollection.Add(btn99);
             #endregion Buttons added to collection.
+
 
             foreach (var item in btnCollection)
             {
+                item.DataContext = btnDataContext;
                 /*
-                if (IsAlive = false)
-                    item.Background = Brushes.Black;
-                else
-                    item.Background = Brushes.LawnGreen;
-                 */
+                if (item.DataContext == "hello")
+                {
+                    item.BorderBrush = Brushes.Blue;
+                }
+                */
             }
         }
+        
+        private void btn00_Click(object sender, RoutedEventArgs e)
+        {
+            btn00.Background = Brushes.Green;
+        }
+
+        private void RightClick(object sender, MouseButtonEventArgs e)
+        {
+            btn00.Background = Brushes.Red;
+        }
+        
     }
 }

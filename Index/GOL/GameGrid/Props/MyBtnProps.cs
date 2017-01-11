@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GOL.GameGrid.Props
 {
-    class MyBtnProps
+    public class MyBtnProps
     {
-        public Boolean IsAlive { get; set; }
+        public string IsAlive { get; set; }
         public string Name { get; set; }
     }
 }
