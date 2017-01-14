@@ -34,10 +34,6 @@ namespace GOL.GameGrid
             {
 
 
-
-
-
-
                 for (int z = 0; i < 10; z++)
                 {
 
@@ -57,7 +53,7 @@ namespace GOL.GameGrid
                     xPos = xPos - xPos;
                 }
             }
-            */
+            
         }
     }
 }
