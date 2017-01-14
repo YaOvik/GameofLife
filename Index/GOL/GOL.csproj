@@ -70,7 +70,7 @@
     <Compile Include="frmGame.xaml.cs">
       <DependentUpon>frmGame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GameGrid\Cell.cs" />
+    <Compile Include="GameGrid\GenMechanics.cs" />
     <Compile Include="GameGrid\CellTypeEnum.cs" />
     <Compile Include="GameGrid\Props\MyBtnProps.cs" />
     <Compile Include="GameGrid\Row.cs" />

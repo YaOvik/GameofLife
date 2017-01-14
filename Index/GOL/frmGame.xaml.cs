@@ -22,16 +22,16 @@ namespace GOL
     public partial class frmGame : Window
     {
 
-        string HelloWorld = "Hello World";
-        private string btnDataContext;
+        private GenLogics myGenMechanics;
         public frmGame()
         {
             InitializeComponent();
+            myGenMechanics = new GenLogics();
             MyBtnProps btnContent = new MyBtnProps() { Name = "T" };
 
-            GameBoard.ShowGridLines = new Grid();
-            
+            btnCollection();
 
+            //int row = (int)btn00.GetValue(GameBoard.Row)
             /*
             if (IsAlive == true)
             {
@@ -42,16 +42,9 @@ namespace GOL
                 btn01.Background = new SolidColorBrush(Color.FromArgb(100, 242, 242, 242));
             }
             */
-
-            btnCollection();
+            
         }
 
-        private void btnReturn_Click(object sender, RoutedEventArgs e)
-        {
-            var newW = new MainWindow();
-            newW.Show();
-            this.Close();
-        }
         private void btnCollection()
         {
             MyBtnProps btnDataContext = new MyBtnProps() { IsAlive = "T" };
@@ -171,104 +164,65 @@ namespace GOL
 
 
             foreach (var item in btnCollection)
-            {
-                item.DataContext = btnDataContext;
-                btn01.Background = new SolidColorBrush(Color.FromArgb(100, 102, 255, 179));
-                /*
-                if (item.DataContext == "hello")
-                {
-                    item.BorderBrush = Brushes.Blue;
-                }
-                */
+            {           
+                
             }
         }
 
-        #region LeftBtnClickEvents
-        private void btn00_Click(object sender, RoutedEventArgs e)
+        #region btnEvents
+
+        private void btnClick(object sender, RoutedEventArgs e)
         {
-            btn00.Background = Brushes.Green;
-        }
-        private void btn01_Click(object sender, RoutedEventArgs e)
-        {
-            btn01.Background = Brushes.Green;
-        }
-        private void btn02_Click(object sender, RoutedEventArgs e)
-        {
-            btn02.Background = Brushes.Green;
-        }
-        private void btn03_Click(object sender, RoutedEventArgs e)
-        {
-            btn03.Background = Brushes.Green;
-        }
-        private void btn04_Click(object sender, RoutedEventArgs e)
-        {
-            btn04.Background = Brushes.Green;
-        }
-        private void btn05_Click(object sender, RoutedEventArgs e)
-        {
-            btn05.Background = Brushes.Green;
+            string btnName; int yPos, xPos; bool living = true;
+
+            ((Button)sender).Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#99ff33"));
+
+            btnName = ((Button)sender).Name;
+            yPos = int.Parse(btnName.Substring(3, 1));
+            xPos = int.Parse(btnName.Substring(4, 1));
+
+            lbl_yPos.Content = yPos;
+            lbl_xPos.Content = xPos;
+
+            myGenMechanics.setPosition(yPos, xPos, living);
         }
 
-        private void btn06_Click(object sender, RoutedEventArgs e)
+        private void btnRigtClick(object sender, MouseButtonEventArgs e)
         {
-            btn60.Background = Brushes.Green;
-        }
-        private void btn07_Click(object sender, RoutedEventArgs e)
-        {
-            btn07.Background = Brushes.Green;
-        }
-        private void btn08_Click(object sender, RoutedEventArgs e)
-        {
-            btn08.Background = Brushes.Green;
-        }
-        private void btn09_Click(object sender, RoutedEventArgs e)
-        {
-            btn09.Background = Brushes.Green;
+            string btnName;  int yPos, xPos;  bool living = false;
+
+            ((Button)sender).Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#e6e6e6"));
+
+            btnName = ((Button)sender).Name;
+            yPos = int.Parse(btnName.Substring(3, 1));
+            xPos = int.Parse(btnName.Substring(4, 1));
+
+            myGenMechanics.setPosition(yPos, xPos, living);
         }
 
-        #endregion LeftBtnClickEvents
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
+        {
+            var newW = new MainWindow();
+            newW.Show();
+            this.Close();
+        }
 
-        #region RightBtnClickEvent
-        private void btn00_RightClick(object sender, MouseButtonEventArgs e)
+        #region NavBarButtons
+        private void btnNewGen_Click(object sender, RoutedEventArgs e)
         {
-            btn00.Background = Brushes.Red;
+
         }
-        private void btn01_RightClick(object sender, MouseButtonEventArgs e)
+
+        private void btnLoadGen_Click(object sender, RoutedEventArgs e)
         {
-            btn01.Background = Brushes.Red;
+
         }
-        private void btn02_RightClick(object sender, MouseButtonEventArgs e)
+
+        private void btnPlayGenSerie_Click(object sender, RoutedEventArgs e)
         {
-            btn02.Background = Brushes.Red;
+
         }
-        private void btn03_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn03.Background = Brushes.Red;
-        }
-        private void btn04_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn04.Background = Brushes.Red;
-        }
-        private void btn05_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn05.Background = Brushes.Red;
-        }
-        private void btn06_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn06.Background = Brushes.Red;
-        }
-        private void btn07_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn07.Background = Brushes.Red;
-        }
-        private void btn08_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn08.Background = Brushes.Red;
-        }
-        private void btn09_RightClick(object sender, MouseButtonEventArgs e)
-        {
-            btn09.Background = Brushes.Red;
-        }
-        #endregion RightBtnClickEvent
+        #endregion NavBarBussons
+        #endregion btnEvents
     }
 }
