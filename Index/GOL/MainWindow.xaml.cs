@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace GOL
 {
@@ -20,9 +21,28 @@ namespace GOL
     /// </summary>
     public partial class MainWindow : Window
     {
+        //frmGame newFrm = new frmGame();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            OpenNewWin();
+        }
+
+        private void btnExitGame_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            Environment.Exit(0);
+        }
+
+        private void OpenNewWin()
+        {
+            var newW = new frmGame();
+            newW.Show();
+            this.Close();
         }
     }
 }

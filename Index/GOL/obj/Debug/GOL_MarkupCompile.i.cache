@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\java\Documents\GitHub\GameofLife\app\Index\GOL\obj\Debug\
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\obj\Debug\
 GOL
 none
 false
 DEBUG;TRACE
-C:\Users\java\Documents\GitHub\GameofLife\app\Index\GOL\App.xaml
-11151548125
+C:\Users\java\Documents\GitHub\GameofLife\GameofLife\Index\GOL\App.xaml
+3-315258695
 
-9-541201141
+161928351222
 13738642453
-MainWindow.xaml;
+frmGame.xaml;MainWindow.xaml;Page1.xaml;
 
-True
+False
 
