@@ -10,9 +10,9 @@ namespace GOL.GameGrid
     {
         
         public bool[,] MyArray = new bool[10, 10];
-        public Int32[,] GridPos = new int[10, 10];
         public bool[,] MyTempArray = new bool[10, 10];
-        
+        public List<Int32> NeighboringCells = new List<int>();
+
 
         /// <summary>
         /// Updates MyArra with living & non-living positions.
@@ -33,7 +33,7 @@ namespace GOL.GameGrid
             }
         }
 
-
+        
         /// <summary>
         /// 1. Find all living cells.
         /// 2. Find all non-living cells next to a living cell.
@@ -48,9 +48,8 @@ namespace GOL.GameGrid
 
         private void btnNeighbors(int yPos, int xPos)
         {
-            int yPosNew, xPosNew, yPosCompare, xPosCompare;
+            int yPosNewLiveCell, xPosNewLiveCell, yPosCompare, xPosCompare;
 
-            
             foreach (var item in MyArray)
             {
                 if (MyArray[yPos, xPos] == true)
@@ -59,33 +58,45 @@ namespace GOL.GameGrid
                     xPosCompare = xPos;
 
                     #region Cell comparising formulas.
-                    //Compare Up - collumn
-                    xPos = xPosCompare - 1;
-
-                    //Compare Down - Collumn
-                    xPos = xPosCompare + 1;
-
-                    //Compare Right - Row
-                    yPos = yPosCompare + 1;
-
-                    //Compare Left - Row
-                    yPos = yPosCompare - 1;
-
-                    //Compare RightUp
-                    yPos = yPosCompare - 1;
-                    xPos = xPosCompare - 1;
-
-                    //Compare RightDown
-                    yPos = yPos - 1;
-                    xPos = xPosCompare + 1;
-
-                    //Compare LeftUp
-                    yPos = yPosCompare + 1;
-                    xPos = xPosCompare - 1;
-
-                    //Comapre LeftDown
-                    yPos = yPosCompare + 1;
-                    xPos = xPosCompare + 1;
+                    // MyCell. yPos, xPos
+                        NeighboringCells.Add(yPos);
+                        NeighboringCells.Add(xPos);
+                    // MyCell.Up
+                        xPosCompare = xPos - 1;
+                        NeighboringCells.Add(yPos);
+                        NeighboringCells.Add(xPosCompare);
+                    // MyCell.Down
+                        xPosCompare = xPos + 1;
+                        NeighboringCells.Add(yPos);
+                        NeighboringCells.Add(xPosCompare);
+                    // MyCell.Right
+                        yPosCompare = yPos + 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPos);
+                    // MyCell.RightCornerUp
+                        yPosCompare = yPos - 1;
+                        xPosCompare = xPos - 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPosCompare);
+                    // MyCell.RightCirnerDown
+                        yPosCompare = yPos - 1;
+                        xPosCompare = xPos + 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPosCompare);
+                    // MyCell.Left
+                        yPosCompare = yPos - 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPos);
+                    // MyCell.LeftCornerUp
+                        yPosCompare = yPos + 1;
+                        xPosCompare = xPos - 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPosCompare);
+                    // MyCell.LeftCornerDown
+                        yPosCompare = yPos + 1;
+                        xPosCompare = xPos + 1;
+                        NeighboringCells.Add(yPosCompare);
+                        NeighboringCells.Add(xPosCompare);
                     #endregion
                 }
             }
