@@ -22,15 +22,14 @@ namespace GOL
     public partial class frmGame : Window
     {
 
-        private GenLogics myGenMechanics;
+        private GenLogics MyGenMechanics;
         public frmGame()
         {
             InitializeComponent();
-            myGenMechanics = new GenLogics();
+            MyGenMechanics = new GenLogics();
             MyBtnProps btnContent = new MyBtnProps() { Name = "T" };
 
             btnCollection();
-            UpdateLabel();
 
             //int row = (int)btn00.GetValue(GameBoard.Row)
             /*
@@ -46,9 +45,9 @@ namespace GOL
             
         }
 
-        private void UpdateLabel()
+        private void UpdateLivingCells(int yPos, int xPos, bool living)
         {
-            lblPosVal.Content = myGenMechanics.MyVal;
+            
         }
 
         private void btnCollection()
@@ -190,7 +189,7 @@ namespace GOL
             lbl_yPos.Content = yPos;
             lbl_xPos.Content = xPos;
 
-            myGenMechanics.setPosition(yPos, xPos, living);
+            MyGenMechanics.setPosition(yPos, xPos, living);
         }
 
         private void btnRigtClick(object sender, MouseButtonEventArgs e)
@@ -203,7 +202,7 @@ namespace GOL
             yPos = int.Parse(btnName.Substring(3, 1));
             xPos = int.Parse(btnName.Substring(4, 1));
 
-            myGenMechanics.setPosition(yPos, xPos, living);
+            MyGenMechanics.setPosition(yPos, xPos, living);
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
@@ -216,7 +215,7 @@ namespace GOL
         #region NavBarButtons
         private void btnNewGen_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void btnLoadGen_Click(object sender, RoutedEventArgs e)

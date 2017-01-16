@@ -8,18 +8,21 @@ namespace GOL.GameGrid
 {
     public class GenLogics
     {
-        public string MyVal
-        {
-            get { return MyVal;  }
-            set { }
-        }
-
+        
         public bool[,] MyArray = new bool[10, 10];
         public Int32[,] GridPos = new int[10, 10];
+        public bool[,] MyTempArray = new bool[10, 10];
+        
+
+        /// <summary>
+        /// Updates MyArra with living & non-living positions.
+        /// </summary>
+        /// <param name="yPos"></param>
+        /// <param name="xPos"></param>
+        /// <param name="living"></param>
 
         public void setPosition(int yPos , int xPos, bool living)
-        {
-            
+        {   
             if(living == false)
             {
                 MyArray[yPos, xPos] = false;
@@ -28,55 +31,64 @@ namespace GOL.GameGrid
             {
                 MyArray[yPos, xPos] = true;
             }
-            btnNeighbors(yPos, xPos, MyVal);
         }
 
-        private void btnNeighbors(int yPos, int xPos, string myVal)
+
+        /// <summary>
+        /// 1. Find all living cells.
+        /// 2. Find all non-living cells next to a living cell.
+        /// 3. Compare the amount of living and non-living cells nexto each other.
+        /// 4. Update living bool.
+        /// 4. Push result yPos, xPos, living & color code to a que.
+        /// 5. Repat untill process is canceld.
+        /// </summary>
+        /// <param name="yPos"></param>
+        /// <param name="xPos"></param>
+        /// <param name="myVal"></param>
+
+        private void btnNeighbors(int yPos, int xPos)
         {
+            int yPosNew, xPosNew, yPosCompare, xPosCompare;
+
             
-            
-            if(MyArray[yPos, xPos] == true)
+            foreach (var item in MyArray)
             {
-                myVal = "true";
-                MyVal = myVal;
-            }
-            else
-            {
-                myVal = "false";
-                MyVal = myVal;
-            }
-
-
-           // LivingCells.GetValue(liveCell_yPos, liveCell_xPos, livingCell);
-
-//            GridPos.GetValue(yPos, xPos);
-
-            //LivingCells
-            /*
-            for (int i = 1; xPos <= yPos; i++)
-            {
-
-
-                for (int z = 0; i < 10; z++)
+                if (MyArray[yPos, xPos] == true)
                 {
+                    yPosCompare = yPos;
+                    xPosCompare = xPos;
 
-                    if (LivingCells(yPos, xPos) == true)
+                    #region Cell comparising formulas.
+                    //Compare Up - collumn
+                    xPos = xPosCompare - 1;
 
+                    //Compare Down - Collumn
+                    xPos = xPosCompare + 1;
 
-                        if (z == 8)
-                    {
-                        break;
-                    }
-                }
-                
-                xPos++;
-                if (xPos == 9)
-                {
-                    yPos = yPos + 1;
-                    xPos = xPos - xPos;
+                    //Compare Right - Row
+                    yPos = yPosCompare + 1;
+
+                    //Compare Left - Row
+                    yPos = yPosCompare - 1;
+
+                    //Compare RightUp
+                    yPos = yPosCompare - 1;
+                    xPos = xPosCompare - 1;
+
+                    //Compare RightDown
+                    yPos = yPos - 1;
+                    xPos = xPosCompare + 1;
+
+                    //Compare LeftUp
+                    yPos = yPosCompare + 1;
+                    xPos = xPosCompare - 1;
+
+                    //Comapre LeftDown
+                    yPos = yPosCompare + 1;
+                    xPos = xPosCompare + 1;
+                    #endregion
                 }
             }
-            */
         }
     }
 }
