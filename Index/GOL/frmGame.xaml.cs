@@ -23,6 +23,7 @@ namespace GOL
     {
 
         private GenLogics MyGenMechanics;
+        int yPos, xPos;
         public frmGame()
         {
             InitializeComponent();
@@ -215,7 +216,25 @@ namespace GOL
         #region NavBarButtons
         private void btnNewGen_Click(object sender, RoutedEventArgs e)
         {
-            
+            int Cols = 10;
+            int Rows = 10;
+
+            var theNewGeneration = MyGenMechanics.CheckCellNeighboring();
+
+            for (int xCols = 0; xCols < Cols; xCols++)
+            {
+                for (int yRows = 0; yRows < Rows; yRows++)
+                {
+                    //btn00
+                    var buttonName = "btn" + xCols.ToString() + yRows.ToString();
+                    var currentButton = (Button)this.FindName(buttonName);
+
+                    if (theNewGeneration[xCols, yRows] == true)
+                        currentButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#000000"));
+                    else
+                        currentButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#e6e6e6"));
+                }
+            }
         }
 
         private void btnLoadGen_Click(object sender, RoutedEventArgs e)

@@ -122,7 +122,7 @@
             <Button x:Name="btn60" Content="" Grid.Column="6" Grid.Row="0" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
             <Button x:Name="btn61" Content="" Grid.Column="6" Grid.Row="1" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
             <Button x:Name="btn62" Content="" Grid.Column="6" Grid.Row="2" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
-            <Button x:Name="btn63" Content="" Grid.Column="6" Grid.Row="3" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
+            <Button x:Name="btn63" Content="" Grid.Column="7" Grid.Row="3" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
             <Button x:Name="btn64" Content="" Grid.Column="6" Grid.Row="4" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
             <Button x:Name="btn65" Content="" Grid.Column="6" Grid.Row="5" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>
             <Button x:Name="btn66" Content="" Grid.Column="6" Grid.Row="6" Height="Auto" Width="Auto" Click="btnClick" MouseRightButtonUp="btnRigtClick"/>

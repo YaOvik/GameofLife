@@ -8,12 +8,21 @@ namespace GOL.GameGrid
 {
     public class GenLogics
     {
-        
-        public bool[,] MyArray = new bool[10, 10];
-        public bool[,] MyTempArray = new bool[10, 10];
+        // X_COLS, Y_ROWS
+        public int Rows { get; set; }
+        public int Cols { get; set; }
+
+        public bool[,] CurrentGeneration;
+        public bool[,] NextGeneration = new bool[10, 10];
         public List<Int32> NeighboringCells = new List<int>();
+        int AmountOfNeighboring;
 
-
+        public GenLogics()
+        {
+            Rows = 10;
+            Cols = 10;
+            CurrentGeneration = new bool[Cols, Rows];
+        }
         /// <summary>
         /// Updates MyArra with living & non-living positions.
         /// </summary>
@@ -25,11 +34,11 @@ namespace GOL.GameGrid
         {   
             if(living == false)
             {
-                MyArray[yPos, xPos] = false;
+                CurrentGeneration[yPos, xPos] = false;
             }
             else
             {
-                MyArray[yPos, xPos] = true;
+                CurrentGeneration[yPos, xPos] = true;
             }
         }
 
@@ -46,60 +55,110 @@ namespace GOL.GameGrid
         /// <param name="xPos"></param>
         /// <param name="myVal"></param>
 
-        private void btnNeighbors(int yPos, int xPos)
+        public bool[,] CheckCellNeighboring()
         {
             int yPosNewLiveCell, xPosNewLiveCell, yPosCompare, xPosCompare;
+            int nrOfNeighbours = 0;
 
-            foreach (var item in MyArray)
+            for (int xCols = 0; xCols < Cols; xCols++)
             {
-                if (MyArray[yPos, xPos] == true)
+                for (int yRows = 0; yRows < Rows; yRows++)
                 {
-                    yPosCompare = yPos;
-                    xPosCompare = xPos;
+                    // for each neighbour in MyArray[xCols, Rows]
+                    // Count nr of neighbours
 
-                    #region Cell comparising formulas.
-                    // MyCell. yPos, xPos
-                        NeighboringCells.Add(yPos);
-                        NeighboringCells.Add(xPos);
-                    // MyCell.Up
-                        xPosCompare = xPos - 1;
-                        NeighboringCells.Add(yPos);
-                        NeighboringCells.Add(xPosCompare);
-                    // MyCell.Down
-                        xPosCompare = xPos + 1;
-                        NeighboringCells.Add(yPos);
-                        NeighboringCells.Add(xPosCompare);
-                    // MyCell.Right
-                        yPosCompare = yPos + 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPos);
-                    // MyCell.RightCornerUp
-                        yPosCompare = yPos - 1;
-                        xPosCompare = xPos - 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPosCompare);
-                    // MyCell.RightCirnerDown
-                        yPosCompare = yPos - 1;
-                        xPosCompare = xPos + 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPosCompare);
-                    // MyCell.Left
-                        yPosCompare = yPos - 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPos);
-                    // MyCell.LeftCornerUp
-                        yPosCompare = yPos + 1;
-                        xPosCompare = xPos - 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPosCompare);
-                    // MyCell.LeftCornerDown
-                        yPosCompare = yPos + 1;
-                        xPosCompare = xPos + 1;
-                        NeighboringCells.Add(yPosCompare);
-                        NeighboringCells.Add(xPosCompare);
-                    #endregion
+                    // Left, upper left, top, top right, right, right down, down, down left
+                    nrOfNeighbours = CountNeighbours(xCols - 1, yRows) +
+                                     CountNeighbours(xCols - 1, yRows - 1) +
+                                     CountNeighbours(xCols - 0, yRows - 1) +
+                                     CountNeighbours(xCols + 1, yRows + 1) +
+                                     CountNeighbours(xCols + 1, yRows + 0) +
+                                     CountNeighbours(xCols + 1, yRows + 1) +
+                                     CountNeighbours(xCols + 1, yRows + 1) +
+                                     CountNeighbours(xCols + 0, yRows + 1);
+
+
+                    if(nrOfNeighbours < 2 || nrOfNeighbours > 3)
+                         NextGeneration[xCols, yRows] = false;
+
+                    if ((nrOfNeighbours == 2) || nrOfNeighbours == 3)
+                        NextGeneration[xCols, yRows] = true;
                 }
             }
+
+            // Copy over all cells in NextGeneration to CurrentGeneration
+            for (int xCols = 0; xCols < Cols; xCols++)
+            {
+                for (int yRows = 0; yRows < Rows; yRows++)
+                {
+                    CurrentGeneration[xCols, yRows] = NextGeneration[xCols, yRows];
+                }
+            }
+
+            return CurrentGeneration;
+
+                    
+                    // Update grid GUI with info from CurrentGeneration
+
+            //        foreach (var item in CurrentGeneration)
+            //{  
+            //        yPosCompare = yPos;
+            //        xPosCompare = xPos;
+            //        AmountOfNeighboring++;
+
+            //        #region Cell comparising formulas.
+            //        // MyCell. yPos, xPos
+            //            NeighboringCells.Add(yPos);
+            //            NeighboringCells.Add(xPos);
+            //        // MyCell.Up
+            //            xPosCompare = xPos - 1;
+            //            NeighboringCells.Add(yPos);
+            //            NeighboringCells.Add(xPosCompare);
+            //        // MyCell.Down
+            //            xPosCompare = xPos + 1;
+            //            NeighboringCells.Add(yPos);
+            //            NeighboringCells.Add(xPosCompare);
+            //        // MyCell.Right
+            //            yPosCompare = yPos + 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPos);
+            //        // MyCell.RightCornerUp
+            //            yPosCompare = yPos - 1;
+            //            xPosCompare = xPos - 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPosCompare);
+            //        // MyCell.RightCirnerDown
+            //            yPosCompare = yPos - 1;
+            //            xPosCompare = xPos + 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPosCompare);
+            //        // MyCell.Left
+            //            yPosCompare = yPos - 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPos);
+            //        // MyCell.LeftCornerUp
+            //            yPosCompare = yPos + 1;
+            //            xPosCompare = xPos - 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPosCompare);
+            //        // MyCell.LeftCornerDown
+            //            yPosCompare = yPos + 1;
+            //            xPosCompare = xPos + 1;
+            //            NeighboringCells.Add(yPosCompare);
+            //            NeighboringCells.Add(xPosCompare);
+            //        #endregion
+            //}
+        }
+
+        private int CountNeighbours(int xCol, int yRow)
+        {
+            if (xCol < 0 || xCol > Rows - 1 || yRow < 0 || yRow > Rows - 1)
+                return 0;
+
+            if (CurrentGeneration[xCol, yRow] == true)
+                return 1;
+            else
+                return 0;
         }
     }
 }
