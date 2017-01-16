@@ -181,7 +181,7 @@ namespace GOL
         {
             string btnName; int yPos, xPos; bool living = true;
 
-            ((Button)sender).Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#99ff33"));
+            ((Button)sender).Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#3333ff"));
 
             btnName = ((Button)sender).Name;
             yPos = int.Parse(btnName.Substring(3, 1));
@@ -230,7 +230,7 @@ namespace GOL
                     var currentButton = (Button)this.FindName(buttonName);
 
                     if (theNewGeneration[xCols, yRows] == true)
-                        currentButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#000000"));
+                        currentButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#3333ff"));
                     else
                         currentButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#e6e6e6"));
                 }

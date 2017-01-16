@@ -15,7 +15,7 @@ namespace GOL.GameGrid
         public bool[,] CurrentGeneration;
         public bool[,] NextGeneration = new bool[10, 10];
         public List<Int32> NeighboringCells = new List<int>();
-        int AmountOfNeighboring;
+
 
         public GenLogics()
         {
@@ -57,32 +57,35 @@ namespace GOL.GameGrid
 
         public bool[,] CheckCellNeighboring()
         {
-            int yPosNewLiveCell, xPosNewLiveCell, yPosCompare, xPosCompare;
             int nrOfNeighbours = 0;
 
             for (int xCols = 0; xCols < Cols; xCols++)
             {
                 for (int yRows = 0; yRows < Rows; yRows++)
                 {
-                    // for each neighbour in MyArray[xCols, Rows]
+                    // for each neighbour in CurrentGeneration[xCols, Rows]
                     // Count nr of neighbours
 
                     // Left, upper left, top, top right, right, right down, down, down left
-                    nrOfNeighbours = CountNeighbours(xCols - 1, yRows) +
-                                     CountNeighbours(xCols - 1, yRows - 1) +
-                                     CountNeighbours(xCols - 0, yRows - 1) +
-                                     CountNeighbours(xCols + 1, yRows + 1) +
-                                     CountNeighbours(xCols + 1, yRows + 0) +
-                                     CountNeighbours(xCols + 1, yRows + 1) +
-                                     CountNeighbours(xCols + 1, yRows + 1) +
-                                     CountNeighbours(xCols + 0, yRows + 1);
+                    nrOfNeighbours = CountNeighbours(xCols - 1, yRows + 0) +  //Left
+                                     CountNeighbours(xCols - 1, yRows - 1) +  //LeftCornerUp
+                                     CountNeighbours(xCols + 0, yRows - 1) +  //Up
+                                     CountNeighbours(xCols + 1, yRows - 1) +  //RightCornerUp
+                                     CountNeighbours(xCols + 1, yRows + 0) +  //Right
+                                     CountNeighbours(xCols + 0, yRows + 1) +  //RightDownCorner
+                                     CountNeighbours(xCols + 0, yRows + 1) +  //Down
+                                     CountNeighbours(xCols - 1, yRows + 1);   //DownLeftCorner
 
-
-                    if(nrOfNeighbours < 2 || nrOfNeighbours > 3)
-                         NextGeneration[xCols, yRows] = false;
-
+                    if (nrOfNeighbours < 2 || nrOfNeighbours > 3)
+                    {
+                        NextGeneration[xCols, yRows] = false;
+                    }
+                        
                     if ((nrOfNeighbours == 2) || nrOfNeighbours == 3)
+                    {
                         NextGeneration[xCols, yRows] = true;
+                    }
+                        
                 }
             }
 
@@ -96,58 +99,7 @@ namespace GOL.GameGrid
             }
 
             return CurrentGeneration;
-
-                    
-                    // Update grid GUI with info from CurrentGeneration
-
-            //        foreach (var item in CurrentGeneration)
-            //{  
-            //        yPosCompare = yPos;
-            //        xPosCompare = xPos;
-            //        AmountOfNeighboring++;
-
-            //        #region Cell comparising formulas.
-            //        // MyCell. yPos, xPos
-            //            NeighboringCells.Add(yPos);
-            //            NeighboringCells.Add(xPos);
-            //        // MyCell.Up
-            //            xPosCompare = xPos - 1;
-            //            NeighboringCells.Add(yPos);
-            //            NeighboringCells.Add(xPosCompare);
-            //        // MyCell.Down
-            //            xPosCompare = xPos + 1;
-            //            NeighboringCells.Add(yPos);
-            //            NeighboringCells.Add(xPosCompare);
-            //        // MyCell.Right
-            //            yPosCompare = yPos + 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPos);
-            //        // MyCell.RightCornerUp
-            //            yPosCompare = yPos - 1;
-            //            xPosCompare = xPos - 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPosCompare);
-            //        // MyCell.RightCirnerDown
-            //            yPosCompare = yPos - 1;
-            //            xPosCompare = xPos + 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPosCompare);
-            //        // MyCell.Left
-            //            yPosCompare = yPos - 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPos);
-            //        // MyCell.LeftCornerUp
-            //            yPosCompare = yPos + 1;
-            //            xPosCompare = xPos - 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPosCompare);
-            //        // MyCell.LeftCornerDown
-            //            yPosCompare = yPos + 1;
-            //            xPosCompare = xPos + 1;
-            //            NeighboringCells.Add(yPosCompare);
-            //            NeighboringCells.Add(xPosCompare);
-            //        #endregion
-            //}
+            // Update grid GUI with info from CurrentGeneration.
         }
 
         private int CountNeighbours(int xCol, int yRow)

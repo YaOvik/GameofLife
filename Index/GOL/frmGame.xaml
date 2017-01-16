@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GOL" 
         mc:Ignorable="d"
-        Title="frmGame" Height="326.4" Width="388.2" Background="#f2f2f2">
-    <Grid x:Name="WindowGrid" Height="Auto" Width="Auto" Margin="0,18,-0.4,-18.2">
+        Title="frmGame" Height="344" Width="388.2" Background="#f2f2f2">
+    <Grid x:Name="WindowGrid" Height="Auto" Width="Auto" Margin="0,18,-0.4,0.4">
         <Grid x:Name="btnNavbar" HorizontalAlignment="Left" Height="38" Margin="45,241,0,0" VerticalAlignment="Top" Width="300">
             <Grid.RowDefinitions>
                 <RowDefinition/>
