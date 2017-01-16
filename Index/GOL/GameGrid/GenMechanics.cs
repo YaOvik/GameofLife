@@ -19,6 +19,7 @@ namespace GOL.GameGrid
 
         public void setPosition(int yPos , int xPos, bool living)
         {
+            
             if(living == false)
             {
                 MyArray[yPos, xPos] = false;
