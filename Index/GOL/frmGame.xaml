@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GOL"
+        xmlns:local="clr-namespace:GOL" 
         mc:Ignorable="d"
         Title="frmGame" Height="326.4" Width="388.2" Background="#f2f2f2">
     <Grid x:Name="WindowGrid" Height="Auto" Width="Auto" Margin="0,18,-0.4,-18.2">
@@ -165,5 +165,6 @@
         </Grid>
         <Label x:Name="lbl_yPos" Content="Label" HorizontalAlignment="Left" Margin="302,20,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_xPos" Content="Label" HorizontalAlignment="Left" Margin="301,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPosVal" Content="Label" HorizontalAlignment="Left" Margin="315,105,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

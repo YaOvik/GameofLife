@@ -30,6 +30,7 @@ namespace GOL
             MyBtnProps btnContent = new MyBtnProps() { Name = "T" };
 
             btnCollection();
+            UpdateLabel();
 
             //int row = (int)btn00.GetValue(GameBoard.Row)
             /*
@@ -43,6 +44,11 @@ namespace GOL
             }
             */
             
+        }
+
+        private void UpdateLabel()
+        {
+            lblPosVal.Content = myGenMechanics.MyVal;
         }
 
         private void btnCollection()

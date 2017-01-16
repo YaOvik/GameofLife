@@ -8,25 +8,47 @@ namespace GOL.GameGrid
 {
     public class GenLogics
     {
-        public bool[,] LivingCells = new bool[10, 10];
+        public string MyVal
+        {
+            get { return MyVal;  }
+            set { }
+        }
+
+        public bool[,] MyArray = new bool[10, 10];
         public Int32[,] GridPos = new int[10, 10];
 
         public void setPosition(int yPos , int xPos, bool living)
         {
             if(living == false)
             {
-                LivingCells[yPos, xPos] = false;
+                MyArray[yPos, xPos] = false;
             }
             else
             {
-                LivingCells[yPos, xPos] = true;
+                MyArray[yPos, xPos] = true;
             }
+            btnNeighbors(yPos, xPos, MyVal);
         }
 
-        private void btnNeighbors(int yPos, int xPos, bool liveCell)
+        private void btnNeighbors(int yPos, int xPos, string myVal)
         {
-            //LivingCells(yPos, xPos, liveCell);
-            GridPos.GetValue(yPos, xPos);
+            
+            
+            if(MyArray[yPos, xPos] == true)
+            {
+                myVal = "true";
+                MyVal = myVal;
+            }
+            else
+            {
+                myVal = "false";
+                MyVal = myVal;
+            }
+
+
+           // LivingCells.GetValue(liveCell_yPos, liveCell_xPos, livingCell);
+
+//            GridPos.GetValue(yPos, xPos);
 
             //LivingCells
             /*
@@ -53,7 +75,7 @@ namespace GOL.GameGrid
                     xPos = xPos - xPos;
                 }
             }
-            
+            */
         }
     }
 }
